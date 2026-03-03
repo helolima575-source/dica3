@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Dica 3 <3</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+footer {
+    margin: 40px 0;
+    font-size: 1em;
+    opacity: 0.8;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Dica 3 <3</h1>
+    <div class="subtitulo"></div>
+
+    <div class="gallery">
+        <!-- Troque pelos nomes das suas fotos -->
+        <img src="FOTO5.jpeg" alt="">
+        <img src="FOTO6.jpeg" alt="">
+   
+    </div>
+	<div style="margin: 40px 0;">
+    <button onclick="revelarFrase()" 
+        style="
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: none;
+            background-color: #ff99cc;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        ">
+        Clique para revelar a dica!
+    </button>
+
+    <p id="fraseSecreta" style="
+        margin-top: 20px;
+        font-size: 18px;
+        display: none;
+        animation: fadeIn 1s ease-in-out;
+    ">
+        Último título mundial do São Paulo em 2005, coitados...
+       
+	 ps: diferente deles ganhei o meu título mundial em 2025, sou feliz de ter você <3
+    </p>
+</div>
+<script>
+function revelarFrase() {
+    document.getElementById("fraseSecreta").style.display = "block";
+}
+</script>
+
+</body>
+</html>
